@@ -36,14 +36,14 @@ with open (csvpath) as csvfile:
 
     average = sum(profit)/len(profit)
 
-        
-print("Financial Analysis")
-print("-"*30)
-print("Total Months: ", TotalMonths)
-print("Total: $", ProLossTotal)
-print("Average Change: $", round(average,2))
-print("Greatest Increase in Profits: ", GreatMonth, "($", Increase, ")")
-print("Greatest Descrease in Profits: ", LeastMonth, "($", Decrease, ")")
+with open("bank.txt", "a") as f:       
+    print("Financial Analysis", file = f)
+    print("-"*30, file = f)
+    print("Total Months: ", TotalMonths, file = f)
+    print("Total: $", ProLossTotal, file = f)
+    print("Average Change: $", round(average,2), file = f)
+    print("Greatest Increase in Profits: ", GreatMonth, "($", Increase, ")", file = f)
+    print("Greatest Descrease in Profits: ", LeastMonth, "($", Decrease, ")", file = f)
         
     
         
